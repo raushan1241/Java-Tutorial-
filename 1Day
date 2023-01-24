@@ -1,0 +1,50 @@
+*Day 1st Code 23/01/23:-
+
+
+Q1.
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+   Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt(); 
+        int b=sc.nextInt();
+        if(a>0&& b>0){
+            System.out.println(a+"-"+b);
+        }
+        else{
+           System.out.println("Invalid Input");
+        }
+    }
+}
+
+
+
+
+Q2.import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Main{
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    Scanner sc=new Scanner(System.in);
+        float a=sc.nextFloat();
+        float b=sc.nextFloat();
+        float c=sc.nextFloat();
+        float d=a+b+c;
+        float e=d/3;
+        DecimalFormat df_obj = new DecimalFormat("#.#");
+        df_obj.setRoundingMode(RoundingMode.FLOOR);
+        System.out.println(df_obj.format(e));
+    }
+}
