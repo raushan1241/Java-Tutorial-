@@ -1,0 +1,117 @@
+Questions1.
+
+
+import java.io.*; 
+
+import java.util.*; 
+
+ 
+
+public class Solution { 
+
+ 
+
+    public static void main(String[] args) { 
+
+        Scanner sc = new Scanner(System.in); 
+
+        Long accountNumber = sc.nextLong(); 
+
+        sc.nextLine(); // Discard the rest of the line after the account number 
+
+        String accountHolderName = sc.nextLine(); 
+
+        char gender = sc.nextLine().charAt(0); 
+
+        int amount = sc.nextInt(); 
+
+        int currentBalance = 20000; 
+
+        String salutation=""; 
+
+         
+
+         if (gender == 'M') { 
+
+                salutation = "Mr. "; 
+
+            } else { 
+
+                salutation = "Ms. "; 
+
+            } 
+
+         
+
+        if (amount <= currentBalance) { 
+
+            int newBalance = currentBalance - amount; 
+
+            
+
+            System.out.println("Hi " + salutation + accountHolderName + "!"); 
+
+            System.out.println("Your Account Balance after withdrawl is " + newBalance + "."); 
+
+        } else { 
+
+            System.out.println("Hi " + salutation + accountHolderName + "!"); 
+
+            System.out.println("Insufficient Funds! You can not withdraw " + amount + "."); 
+
+        }
+
+    } 
+
+}
+
+
+Questions2.
+
+import java.io.*;
+
+import java.util.*;
+
+public class Solution
+
+{
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner (System.in);
+
+        int num = sc.nextInt();
+
+        int Count = 0;
+
+        for (int i = 0; i<num; i++)
+
+        {
+
+            if (num == i * i * i ){
+
+                Count++;
+
+            }
+
+        }
+
+        if( Count  == 1)
+
+        {
+
+            System.out.println("Perfect Cube");
+
+        }
+
+        else{
+
+            System.out.println("Not Perfect Cube");
+
+        }
+
+    }
+
+}
+
+
