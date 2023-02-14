@@ -1,0 +1,57 @@
+Questions 1.
+
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=1;i<=n;i++){
+         for(int j=1;j<=n-i+1;j++){
+         System.out.print(j+" ");
+         }
+         System.out.println();
+        }
+        
+    }
+}
+
+Questions 2.
+
+import java.text.DecimalFormat;
+import java.util.*;
+
+public class Solution {
+ public static void main(String[] args) {
+ Scanner sc = new Scanner(System.in);
+ double borrowedAmount = sc.nextDouble();
+ double interestRate = 0.10;
+ double totalAmount = borrowedAmount * (1 + interestRate);
+ double emi = totalAmount / 12;
+
+ DecimalFormat decimalFormat = new DecimalFormat("#.##");
+
+ System.out.println(decimalFormat.format(totalAmount));
+ System.out.println(decimalFormat.format(emi));
+ }
+}
+
+
+
+
+
+
+  
+     
+    
+
+
+
+
+
+
+
+
+ 
+    
