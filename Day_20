@@ -1,0 +1,48 @@
+Questions 1.
+import java.util.Scanner;
+public class Students {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numSubjects = scanner.nextInt();
+        double[][] marks = new double[numSubjects][];
+        for (int x = 0; x < numSubjects; x++) { 
+            int numCAs = scanner.nextInt();
+
+            marks[x] = new double[numCAs];
+            for (int y = 0; y < numCAs; y++) {
+                
+                marks[x][y] = scanner.nextDouble();
+            }
+        }
+
+        int subjectNum = scanner.nextInt();
+
+        double sum = 0;
+        for (double mark : marks[subjectNum - 1]) {
+            sum += mark;
+        }
+        double avg = sum / marks[subjectNum - 1].length;
+
+        System.out.println("Average in Subject-" + subjectNum + " is " + avg);
+    }
+}
+
+Questions 2.
+import java.util.*;
+public class Studenst {
+    public static void main(String[] args) {
+        Scanner mn = new Scanner(System.in);
+        String[] array1 = mn.nextLine().split(" ");
+        String[] array2 = mn.nextLine().split(" ");
+        int c = 0;
+        for (String item1 : array1) {
+            for (String item2 : array2) {
+                if (item1.equals(item2)) {
+                    c++;
+                }
+            }
+        }
+
+        System.out.println(c);
+    }
+}
