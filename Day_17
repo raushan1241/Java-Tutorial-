@@ -1,0 +1,48 @@
+Questions 1.
+import java.util.Scanner;
+
+public class Constraints {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+       int size = sc.nextInt();
+        if (size <= 0) {
+            System.out.println("Invalid Array Size");
+            return;}
+        double[] doubleArray = new double[size];
+        for (int x = 0; x < size; x++) {
+            doubleArray[x] = sc.nextDouble();
+            if (doubleArray[x] < 0) {
+                System.out.println("Invalid Array Elements");
+                return; } }
+        int[] intArray = new int[size];
+        for (int x = 0; x < size; x++) {
+            intArray[x] = (int)doubleArray[x]; }
+        for (int x = 0; x < size; x++) {
+            System.out.println(intArray[x]);
+        }
+    }
+}
+
+Questions 2.
+import java.util.Scanner;
+
+public class Constraintss {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        int k = 7;
+        
+        for (int y= 0; y < x; y++) {
+            int total = 0;
+            for (int z = 0; z < k; z++) {
+                total += scanner.nextInt();
+            }
+            if (total == 56) {
+                System.out.println("1");
+            } else {
+                System.out.println("0");
+            }
+        }
+        scanner.close();
+    }
+}
