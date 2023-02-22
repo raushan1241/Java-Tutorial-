@@ -1,0 +1,63 @@
+Questions 1.
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Arrays;
+
+public class Students {
+
+    public static void main(String[] args) {
+        Scanner ab= new Scanner(System.in);
+        int N=ab.nextInt();
+        if(N<0)
+        {    System.out.println("Invalid Array Elements");
+           return;
+            }
+        int arr[]=new int[N];
+        for(int m=0;m<N;m++){
+            arr[m]=ab.nextInt();
+            if(arr[m]<0)
+            {
+                 System.out.println("Invalid Array Size");
+                break;
+            }
+            }
+        Arrays.sort(arr);
+        if(arr.length<2)
+        {
+             System.out.println("Invalid Array Elements");
+        }
+        else{
+            int secl=arr[arr.length-2];
+             System.out.println(secl);
+        }
+    }
+}
+
+Questions 2.
+import java.io.*;
+import java.util.*;
+
+public class Students {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] deck1 = new int[n];
+        int[] deck2 = new int[n];
+        for (int m = 0; m < n; m++) {
+            deck1[m] = sc.nextInt();
+            deck2[m] = deck1[m];
+        }
+        for (int m = 0; m < n; m++) {
+            System.out.print(deck1[m] + " ");
+        }
+        System.out.println();
+        for (int m = 0; m < n; m++) {
+            System.out.print(deck2[m] + " ");
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
