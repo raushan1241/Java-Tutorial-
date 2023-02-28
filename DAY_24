@@ -1,0 +1,40 @@
+Questions 1.
+import java.io.*;
+import java.util.*;
+
+public class Students {
+
+    public static void main(String[] args) {
+              Scanner zz = new Scanner(System.in);
+        int l =zz.nextInt();
+        int factorial = 1;
+        if(l<=10 && l>0){
+        for(int i = 1;i<=l;i++)
+        {
+            factorial = factorial*i;
+        }
+        System.out.println(factorial);
+    }
+    }
+}
+
+Questions 2.
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int l =sc.nextInt();
+        int factorial = 1;
+        if(l<=10 && l>0){
+        for(int i = 1;i<=l;i++)
+        {
+            factorial = factorial*i;
+        }
+        System.out.println(factorial);
+    }
+    }
+}
