@@ -1,0 +1,51 @@
+Questions 1.
+import java.io.*;
+import java.util.*;
+public class Students {
+    public static void main(String[] args){
+        Scanner xy = new Scanner(System.in);
+        int choice = xy.nextInt();
+        switch(choice) {
+            case 1:
+                String name = xy.next();
+                int regNo = -1;
+                while(regNo<0){
+                    regNo = xy.nextInt();
+                }
+                if(regNo==0)
+                    regNo += 1;
+                System.out.print(name + "," + regNo);
+                break;
+            case 2:
+                System.out.print("null,0");
+                break;
+            default: 
+                System.out.print("Wrong Choice");
+        }
+    }
+}
+
+Questions 2.
+
+import java.io.*;
+import java.util.*;
+
+public class students {
+
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+        int empID=sc.nextInt();
+        String empName=sc.next();
+        String empDesignation=sc.next();
+        int basicSalary=20000;
+        
+        if(empID>201){
+            int salary=basicSalary+1000;
+            System.out.println(empName);
+             System.out.println(empID);
+             System.out.println(salary);
+        }else{
+            System.out.println("No Appraisal");
+        }
+    }
+}
