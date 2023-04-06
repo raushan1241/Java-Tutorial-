@@ -1,0 +1,28 @@
+Questions 1.
+import java.io.*;
+import java.util.*;
+
+public class students {
+
+ public static void main(String[] args) {
+ Scanner sc = new Scanner(System.in);
+ String str = sc.nextLine();
+ str=str.toLowerCase();
+ str=str.replace(' ','$');
+ System.out.println(str);
+ 
+ }
+}
+Questions 2.
+import java.io.*;
+import java.util.*;
+
+public class Students {
+
+ public static void main(String[] args) {
+ 
+ Scanner sc = new Scanner(System.in);
+ int num = sc.nextInt();
+ System.out.print((num%2==0 && num%13==0)? "True" : "False");
+ }
+}
