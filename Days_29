@@ -1,0 +1,143 @@
+Questions 1.
+
+    
+import java.io.*;
+
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        // Example usage
+
+        double[][] marks = {
+
+            {10.5, 2.5, 15},
+
+            {5.25, 6.75, 11.25}
+
+        };
+
+        double[] averages = average_marks(marks);
+
+        for (double avg : averages) {
+
+            System.out.print(avg + " ");
+
+        }
+
+    }
+
+    public static double[] average_marks(double[][] marks) {
+
+        double[] averages = new double[marks.length];
+
+        for (int i = 0; i < marks.length; i++) {
+
+            double[] student_marks = marks[i];
+
+            // Find the indices of the best two marks
+
+            int best1_index = 0;
+
+            int best2_index = 1;
+
+            if (student_marks[best2_index] > student_marks[best1_index]) {
+
+                int temp = best1_index;
+
+                best1_index = best2_index;
+
+                best2_index = temp;
+
+            }
+
+            for (int j = 2; j < student_marks.length; j++) {
+
+                if (student_marks[j] > student_marks[best1_index]) {
+
+                    best2_index = best1_index;
+
+                    best1_index = j;
+
+                } else if (student_marks[j] > student_marks[best2_index]) {
+
+                    best2_index = j;
+
+                }
+
+            }
+
+            // Compute the average of the best two marks
+
+            double best1 = student_marks[best1_index];
+
+            double best2 = student_marks[best2_index];
+
+            double average = (best1 + best2) / 2;
+
+            averages[i] = average;
+
+        }
+
+        return averages;
+
+    }
+
+}
+
+Questions 2.
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Accept the input sizes and elements
+        int size1 = scanner.nextInt();
+        int[] arr1 = new int[size1];
+        for (int i = 0; i < size1; i++) {
+            arr1[i] = scanner.nextInt();
+        }
+
+        int size2 = scanner.nextInt();
+        int[] arr2 = new int[size2];
+        for (int i = 0; i < size2; i++) {
+            arr2[i] = scanner.nextInt();
+        }
+
+        int size3 = scanner.nextInt();
+        int[] arr3 = new int[size3];
+        for (int i = 0; i < size3; i++) {
+            arr3[i] = scanner.nextInt();
+        }
+
+        // Find the common elements
+        Set<Integer> set1 = new HashSet<>();
+        Set<Integer> set2 = new HashSet<>();
+        Set<Integer> set3 = new HashSet<>();
+
+        for (int i = 0; i < size1; i++) {
+            set1.add(arr1[i]);
+        }
+        for (int i = 0; i < size2; i++) {
+            set2.add(arr2[i]);
+        }
+        for (int i = 0; i < size3; i++) {
+            set3.add(arr3[i]);
+        }
+
+        set1.retainAll(set2);
+        set1.retainAll(set3);
+
+        // Print the common elements in ascending order
+        List<Integer> commonElements = new ArrayList<>(set1);
+        Collections.sort(commonElements);
+        for (int i = 0; i < commonElements.size(); i++) {
+            System.out.print(commonElements.get(i) + " ");
+        }
+    }
+}
