@@ -1,0 +1,68 @@
+Questions1.
+import java.io.*;
+import java.util.*;
+
+public class Students {
+
+    public static void main(String[] args) {
+        
+        Scanner harsh=new Scanner(System.in);
+        int size= harsh.nextInt();
+        if(size<0)
+        {
+            System.out.println("Invalid Array Size");
+            System.exit(0);
+        }
+        else{
+            int arr[]=new int[size];
+            int sum=0;
+            int mul=1;
+            for(int i=0;i<size;i++)
+            {
+                arr[i]=harsh.nextInt();
+                sum+=arr[i];
+                mul*=arr[i];
+            }
+            
+            int choice=harsh.nextInt();
+            if(choice==1)
+            {
+                System.out.println(sum);
+            }
+            else if(choice==2)
+            {
+                System.out.println(mul);
+            }
+            else{
+                System.out.println("Wrong Choice");
+            }
+            
+        }
+    }
+}
+
+Questions 2.
+import java.io.*;
+import java.util.*;
+
+public class Students {
+
+    public static void main(String[] args) {
+        Scanner raushan=new Scanner(System.in);
+        int number=raushan.nextInt();
+        if(number>=20 && number<=400)
+        {
+            if((number%2==0) && (number%3==0))
+            {
+            
+                System.out.println("True");
+            }
+            else{
+                System.out.println("False");
+            }   
+        }
+        else{
+            System.out.println("Invalid Input");
+        }
+    }
+}
